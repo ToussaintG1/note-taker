@@ -7,7 +7,6 @@ const apiRoutes = require('../routes/apiRoutes');
 const port = 3001;
 
 // Middleware for parsing JSON and urlencoded form data
-
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 // tell the app to send the contents of the public folder 
