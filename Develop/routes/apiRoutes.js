@@ -5,7 +5,7 @@ const { v4: uuidv4 } = require('uuid');
 
 // GET for reading notes
 app.get('/', (req, res) => {
-  res.json(JSON.parse(fs.readFileSync("../db/db.json", "utf8")))
+  res.json(JSON.parse(fs.readFileSync("./db/db.json", "utf8")))
 });
 
   
@@ -28,7 +28,7 @@ app.get('/', (req, res) => {
            
     const stringifyNote = JSON.stringify(newNote)
     // Obtain existing notes
-    fs.readFile('../db/db.json', 'utf8', (err, stringifyNote) => {
+    fs.readFile('./db/db.json', 'utf8', (err, stringifyNote) => {
       if (err) {
         console.error("ERR in read file", err);
       }
@@ -39,7 +39,7 @@ app.get('/', (req, res) => {
         console.log(parsedNotes)
         // Write updated notes back to the file
         fs.writeFile(
-          '../db/db.json',
+          './db/db.json',
           JSON.stringify(parsedNotes),
           (err) =>
           err ? console.error(err) : console.log(`${newNote.title} has been written to file!`));
