@@ -5,10 +5,10 @@
 - I built this project as part of requirment for my fullstack developer certifcation as well as a display of my work for future employers
 
 # Usage 
-- You can use this app at 
+- You can use this app at https://toussaints-note-taker1-efd0af5a94a4.herokuapp.com
 
 
-image.png
+image.png 
 
 # Credits
 - Toussaint Gilbert
